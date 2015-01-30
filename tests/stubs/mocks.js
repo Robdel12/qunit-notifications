@@ -35,9 +35,10 @@
   },
 
   NotificationMock.permission = "default";
+  NotificationMock.permissionToGrant = "granted";
 
   NotificationMock.requestPermission = function requestPermission(callback) {
-    this.permission = "granted";
+    this.permission = this.permissionToGrant;
     callback && callback(this.permission);
   };
 
